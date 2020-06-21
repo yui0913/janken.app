@@ -33,7 +33,6 @@ export default {
                 timer: null,
                 resultMessage: ''
             }
-        }
   },
   methods:{
       
@@ -46,7 +45,7 @@ export default {
                     this.src = this.imgList[num];
                 }
       },
-      gameStart(){
+      gameStart() {
           this.timer = setInterval(this.changeImg,80)
           document.getElementById('gameStart').setAttribute('disabled', true)
           let btns = document.querySelectorAll('.button');
@@ -54,7 +53,7 @@ export default {
                     btn.removeAttribute('disabled');
                 }
       },
-      onSelected(e){
+      onSelected(e) {
           clearInterval(this.timer)
           let btns = document.querySelectorAll('.button');
                 for( let btn of btns ) {
